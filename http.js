@@ -1,10 +1,8 @@
-﻿var sys = require("util"),
-    http = require("http");
-
-http.createServer(function(request, response) {
-    response.writeHead(200, {"Content-Type": "text/html"});
-    response.write("Hello World!");
-    response.close();
-}).listen(8080);
-
-sys.puts("Server running at http://localhost:8080/");
+﻿var http = require('http');
+ 
+http.createServer(function (request, response) {
+  response.writeHead(200, {'Content-Type': 'text/plain'});
+  response.end('Hello World\n');
+}).listen(8124);
+ 
+console.log('Server running at http://127.0.0.1:8124/');
